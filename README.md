@@ -28,6 +28,7 @@ The dashboard provides visualization of several maritime weather parameters, inc
 
 The general workflow of the dashboard is:
 
+```text
 AWS Observation Data
         │
         ▼
@@ -45,6 +46,7 @@ Himawari Satellite Imagery
         │
         ▼
    Flask Web Application
+```
 
 ## Technologies
 
@@ -91,6 +93,7 @@ The dashboard was developed to support the visualization and monitoring of marit
 
 The repository contains the main components required to demonstrate the dashboard development and its workflow.
 
+```text
 bmkg-maritime-weather-dashboard/
 │
 ├── README.md
@@ -98,6 +101,7 @@ bmkg-maritime-weather-dashboard/
 ├── templates/
 ├── static/
 └── ...
+```
 
 Some original BMKG data files and operational data sources are not included in this repository due to data access and usage considerations.
 
