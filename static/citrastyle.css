@@ -1,0 +1,1021 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* =========================================================
+   NORMALIZE
+   ========================================================= */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+
+/* =========================================================
+   DEFAULT
+   ========================================================= */
+
+.my-element {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+
+/* =========================================================
+   BODY / BACKGROUND
+   ========================================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url('bg_awan.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 22px;
+    color: #333;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.content {
+    text-align: left;
+    padding: 50px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    margin-left: 18px;
+}
+
+
+/* =========================================================
+   JUDUL
+   ========================================================= */
+
+h1 {
+    text-shadow: 3px 2px 1px lightgrey;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.text p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   GARIS
+   ========================================================= */
+
+hr {
+    width: 100%;
+    border-top: 1px solid #333;
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   JUDUL CITRA SATELIT
+   ========================================================= */
+
+.column h2 {
+    color: white;
+    font-size: 18px;
+
+    background-color: blue;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    width: 480px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   JUDUL CITRA MODEL
+   ========================================================= */
+
+.column h3 {
+    color: white;
+    font-size: 18px;
+
+    background-color: green;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    width: 480px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+video {
+    width: 310px;
+    height: 235px;
+}
+
+
+/* =========================================================
+   FORM OPTION
+   ========================================================= */
+
+.column select {
+    width: 50%;
+
+    padding: 3px;
+
+    border: 1px solid #ccc;
+    border-radius: 2px;
+
+    background-color: #f8f8f8;
+
+    font-size: 12px;
+    color: #000000;
+}
+
+
+/* =========================================================
+   COLUMN
+   ========================================================= */
+
+.column {
+    width: 28%;
+
+    float: left;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    position: relative;
+
+    top: -10px;
+    left: -15px;
+}
+
+
+/* =========================================================
+   VIDEO CONTAINER
+   ========================================================= */
+
+.video-container {
+    width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .column {
+        width: 100%;
+
+        float: none;
+
+        margin-bottom: 5px;
+        margin-top: -20px;
+    }
+
+}
+
+
+/* =========================================================
+   PERINGATAN DINI - HEADER
+   ========================================================= */
+
+.kotakk {
+    float: right;
+
+    width: 41%;
+    height: 30px;
+
+    background-color: gold;
+
+    text-align: center;
+
+    padding: 10px;
+
+    position: absolute;
+
+    top: 130px;
+    right: 41px;
+}
+
+
+/* =========================================================
+   GAMBAR PERINGATAN
+   ========================================================= */
+
+.kotakk img {
+    height: 50px;
+    width: 50px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ISI PERINGATAN DINI
+   ========================================================= */
+
+.kotak2 {
+    float: right;
+
+    width: 41%;
+    height: 130px;
+
+    position: absolute;
+
+    background-color: yellow;
+
+    text-align: left;
+
+    padding: 10px;
+
+    top: 180px;
+    right: 41px;
+
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TOMBOL STOP
+   ========================================================= */
+
+.stop-button {
+    display: block;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   AWS
+   ========================================================= */
+
+.aws {
+    float: right;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    right: 38px;
+    bottom: 15px;
+
+    clear: both;
+}
+
+
+/* =========================================================
+   JUDUL REALTIME AWS
+   ========================================================= */
+
+.kotakjudulaws {
+    width: 49.4%;
+    height: 6%;
+
+    background-color: blueviolet;
+
+    float: left;
+
+    position: absolute;
+
+    top: 410px;
+    left: 43px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+.kotakjudulaws h2 {
+    font-family: sans-serif;
+
+    font-size: 20px;
+
+    color: white;
+
+    text-align: center;
+
+    margin-top: 9px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   KOTAK AWS UTAMA
+   ========================================================= */
+
+.kotak {
+    width: 49.4%;
+    height: 20%;
+
+    background-color: rgba(240, 240, 240, 0.8);
+
+    float: left;
+
+    position: absolute;
+
+    top: 448px;
+    left: 43px;
+    bottom: 0;
+
+    clear: both;
+}
+
+
+/* =========================================================
+   KOTAK SENSOR 1
+   ========================================================= */
+
+.kotak-kecil {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    float: left;
+
+    position: absolute;
+
+    top: 462px;
+    left: 43px;
+    bottom: 0;
+
+    clear: both;
+
+    z-index: 2;
+
+    text-align: right;
+
+    vertical-align: bottom;
+}
+
+
+/* =========================================================
+   KOTAK SENSOR 2
+   ========================================================= */
+
+.kotak-kecil1 {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    float: left;
+
+    position: absolute;
+
+    top: 462px;
+    left: 158px;
+    bottom: 0;
+
+    clear: both;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   KOTAK SENSOR 3
+   ========================================================= */
+
+.kotak-kecil2 {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    float: left;
+
+    position: absolute;
+
+    top: 462px;
+    left: 273px;
+    bottom: 0;
+
+    clear: both;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   KOTAK SENSOR 4
+   ========================================================= */
+
+.kotak-kecil3 {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    float: left;
+
+    position: absolute;
+
+    top: 462px;
+    left: 388px;
+    bottom: 0;
+
+    clear: both;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   KOTAK SENSOR 5
+   ========================================================= */
+
+.kotak-kecil4 {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    float: left;
+
+    position: absolute;
+
+    top: 462px;
+    left: 503px;
+    bottom: 0;
+
+    clear: both;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   KOTAK SENSOR 6
+   ========================================================= */
+
+.kotak-kecil5 {
+    width: 100px;
+    height: 100px;
+
+    background-color: blue;
+
+    float: left;
+
+    position: absolute;
+
+    top: 464px;
+    left: 618px;
+    bottom: 0;
+
+    clear: both;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   LABEL SENSOR 1
+   ========================================================= */
+
+.kotak-kuecil {
+    width: 100px;
+    height: 25px;
+
+    background-color: green;
+
+    float: left;
+
+    position: absolute;
+
+    top: 459px;
+    left: 43px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   LABEL SENSOR 2
+   ========================================================= */
+
+.kotak-kuecil1 {
+    width: 100px;
+    height: 25px;
+
+    background-color: green;
+
+    float: left;
+
+    position: absolute;
+
+    top: 459px;
+    left: 158px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   LABEL SENSOR 3
+   ========================================================= */
+
+.kotak-kuecil2 {
+    width: 100px;
+    height: 25px;
+
+    background-color: green;
+
+    float: left;
+
+    position: absolute;
+
+    top: 459px;
+    left: 273px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   LABEL SENSOR 4
+   ========================================================= */
+
+.kotak-kuecil3 {
+    width: 100px;
+    height: 25px;
+
+    background-color: green;
+
+    float: left;
+
+    position: absolute;
+
+    top: 459px;
+    left: 388px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   LABEL SENSOR 5
+   ========================================================= */
+
+.kotak-kuecil4 {
+    width: 100px;
+    height: 25px;
+
+    background-color: green;
+
+    float: left;
+
+    position: absolute;
+
+    top: 459px;
+    left: 503px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   LABEL SENSOR 6
+   ========================================================= */
+
+.kotak-kuecil5 {
+    width: 100px;
+    height: 25px;
+
+    background-color: green;
+
+    float: left;
+
+    position: absolute;
+
+    top: 459px;
+    left: 618px;
+    bottom: 0;
+
+    clear: both;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   TEKS LABEL SENSOR
+   ========================================================= */
+
+.kotak-kuecil h2,
+.kotak-kuecil1 h2,
+.kotak-kuecil2 h2,
+.kotak-kuecil3 h2,
+.kotak-kuecil4 h2,
+.kotak-kuecil5 h2 {
+    color: whitesmoke;
+
+    font-size: 9px;
+
+    width: 50px;
+
+    display: inline;
+
+    margin: 0;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   NILAI SENSOR 1
+   ========================================================= */
+
+.kotak-kecil h1 {
+    font-size: 30px;
+
+    color: whitesmoke;
+
+    text-align: center;
+
+    z-index: 9;
+
+    margin-top: 35px;
+    margin-bottom: 0;
+
+    text-shadow: none;
+}
+
+
+/* =========================================================
+   NILAI SENSOR 2
+   ========================================================= */
+
+.kotak-kecil1 h1 {
+    font-size: 25px;
+
+    color: whitesmoke;
+
+    text-align: center;
+
+    z-index: 9;
+
+    margin-top: 38px;
+    margin-bottom: 0;
+
+    text-shadow: none;
+}
+
+
+/* =========================================================
+   NILAI SENSOR 3
+   ========================================================= */
+
+.kotak-kecil2 h1 {
+    font-size: 30px;
+
+    color: whitesmoke;
+
+    text-align: center;
+
+    z-index: 9;
+
+    margin-top: 35px;
+    margin-bottom: 0;
+
+    text-shadow: none;
+}
+
+
+/* =========================================================
+   NILAI SENSOR 4
+   ========================================================= */
+
+.kotak-kecil3 h1 {
+    font-size: 30px;
+
+    color: whitesmoke;
+
+    text-align: center;
+
+    z-index: 9;
+
+    margin-top: 35px;
+    margin-bottom: 0;
+
+    text-shadow: none;
+}
+
+
+/* =========================================================
+   NILAI SENSOR 5
+   ========================================================= */
+
+.kotak-kecil4 h1 {
+    font-size: 22px;
+
+    color: whitesmoke;
+
+    text-align: center;
+
+    z-index: 9;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    text-shadow: none;
+}
+
+
+/* =========================================================
+   NILAI SENSOR 6
+   ========================================================= */
+
+.kotak-kecil5 h1 {
+    font-size: 30px;
+
+    color: whitesmoke;
+
+    text-align: center;
+
+    z-index: 9;
+
+    margin-top: 35px;
+    margin-bottom: 0;
+
+    text-shadow: none;
+}
+
+
+/* =========================================================
+   UNIT / KETERANGAN SENSOR
+   ========================================================= */
+
+.kotak-kecil h2,
+.kotak-kecil1 h2,
+.kotak-kecil2 h2,
+.kotak-kecil3 h2,
+.kotak-kecil4 h2,
+.kotak-kecil5 h2 {
+    font-size: 12px;
+
+    color: whitesmoke;
+
+    text-align: right;
+
+    z-index: 10;
+
+    margin-top: 8px;
+    margin-right: 3px;
+}

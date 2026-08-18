@@ -1,0 +1,17 @@
+# Data pribadi / data mentah
+Data_AWS.csv
+daftar_warning_ffbul_.xlsx
+daftar_warning_hss_.xlsx
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/
+.venv/
+
+# File OS
+.DS_Store
+Thumbs.db

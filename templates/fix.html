@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Awan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='citrastyle.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
+  <style>
+
+  </style>
+
+  <script>
+    function tampilan() {
+      var opsi = document.getElementById("Satelit");
+      var pilihan = opsi.options[opsi.selectedIndex].value;
+      var video = document.getElementById("video_satelit");
+
+      if (pilihan === "type1") {video.src = "{{url_for('static', filename='cloud_cluster.mp4')}}";} 
+      else if (pilihan === "type2") {video.src = "{{url_for('static', filename='video_output.mp4')}}";} 
+    //   else if (pilihan === "type3") {video.src = "video_output3.mp4";}
+    }
+
+    function tampilan1() {
+      var opsi = document.getElementById("Model");
+      var pilihan = opsi.options[opsi.selectedIndex].value;
+      var video = document.getElementById("video_citra_model");
+
+      if (pilihan === "type1") {video.src = "{{ url_for('static', filename='citra_arus.mp4') }}";} 
+      else if (pilihan === "type2") {video.src = "{{ url_for('static', filename='citra_gelombang.mp4') }}";}
+      else if (pilihan === "type3") {video.src = "{{ url_for('static', filename='citra_angin.mp4') }}";} 
+    }
+  </script>
+</head>
+
+<body>
+  <div class="content">
+    <div class="header">
+      <img src="{{ url_for('static', filename='logo_bmkg.png') }}" alt="Logo BMKG"
+      style="max-width: 10%; max-height: 10%;">
+      <div class="text">
+        <p>BADAN METEOROLOGI, KLIMATOLOGI, DAN GEOFISIKA</p>
+        <hr>
+        <p>Stasiun Meteorologi Maritim Perak II Surabaya</p>
+      </div>
+    </div>
+    <h1>DASHBOARD MONITORING INFORMASI MARITIM</h1>
+
+    <!-- Kolom Citra Satelit -->
+    <div class="column">
+      <div class="select-wrapper">
+        <select id="Satelit" onchange="tampilan()">
+          <option value="" disabled selected>Pilih Jenis Citra</option>
+          <option value="type1">Himawari-9 Cloud Cluster</option>
+          <option value="type2">Himawari-8 IR Enchaned</option>
+        <!-- <option value="type3">Himawari-9 Geohotspot</option> -->
+        </select>
+      </div>
+      <div class="video-container">
+        <!-- Tempatkan video tampilan citra di bawah video diputar berulang kali -->
+        <video id="video_satelit" controls autoplay loop> 
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Kolom Data Model -->
+    <div class="column">
+      <div class="select-wrapper">
+        <select id="Model" onchange="tampilan1()">
+          <option value="" disabled selected>Pilih Citra Model</option>
+          <option value="type1">Citra Model Arus</option>
+          <option value="type2">Citra Model Gelombang</option>
+          <option value="type3">Citra Model Angin</option>
+        </select>
+      </div>
+      <div class="video-container">
+        <!-- Tempatkan video tampilan citra di bawah video diputar berulang kali -->
+        <video id="video_citra_model" controls autoplay loop> 
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Kolom Peringatan Dini-->
+    <div class="kotakk">  
+      <img src="{{ url_for('static', filename='images/peringatan2.png') }}" alt="Gambar Peringatan">
+        PERINGATAN DINI <br> 
+    </div>
+    <div class="kotak2"> 
+      Peringatan dini berlaku pada {{tanggal_minimal}} {{jam_minimal}} 
+        sampai {{tanggal_maksimal}} {{jam_maksimal}} 
+        {{kecepatan_angin}}
+      <button id="stopButton">Berhenti</button></div>
+  
+    <script>
+      function loadVoices() {
+          return new Promise((resolve) => {
+              let voices = speechSynthesis.getVoices();
+              if (voices.length > 0) {
+                  resolve(voices);
+              } else {
+                  window.speechSynthesis.onvoiceschanged = () => {
+                      voices = speechSynthesis.getVoices();
+                      resolve(voices);
+                  };
+              }
+          });
+      }
+
+      async function speakIndonesian() {
+          const voices = await loadVoices();
+          const indonesianVoice = voices.find(voice => voice.lang.startsWith('id') || voice.lang.startsWith('in')); // 'in' for Indonesian in some browsers
+
+          const textToSpeak = document.querySelector('.kotak2').textContent;
+          const utterance = new SpeechSynthesisUtterance(textToSpeak);
+          if (indonesianVoice) utterance.voice = indonesianVoice;
+          utterance.lang = 'id-ID';
+          
+          utterance.onend = () => speakIndonesian(); // Recur to create a loop
+
+          window.speechSynthesis.speak(utterance);
+      }
+
+      document.getElementById('stopButton').addEventListener('click', () => {
+          window.speechSynthesis.cancel();
+      });
+
+      // Start speaking after checking support
+      if ('speechSynthesis' in window) {
+          speakIndonesian();
+      } else {
+          alert('Maaf, speech synthesis tidak didukung di browser Anda.');
+      }
+    </script>
+
+    <!-- Kolom Figur AWS -->
+    <div class="aws">
+      <img src="{{ url_for('static', filename='aws.png')}}" alt="AWS" align="right"
+      style="max-width: 44%; max-height: 39%;
+      bottom: 15px;">
+    </div>
+
+    <div class="kotakjudulaws">
+      <h2>REALTIME AWS</h2>
+    </div>
+
+    <!-- Kolom Nomor AWS -->
+    <div class="kotak"></div>
+
+        <!--Kolom Kotak Kecil-->
+    <div class="kotak-kecil">
+      <h1>{{ windspeed }}</h1>
+      <!-- <h2>m/s</h2> -->
+    </div>  
+    <div class="kotak-kecil1">
+      <h1>{{ winddir }}</h1>
+      <!-- <h2>m/s</h2> -->
+    </div>
+    <div class="kotak-kecil2">
+      <h1>{{ temp }}</h1>
+      <!-- <h2>m/s</h2> -->
+    </div>
+    <div class="kotak-kecil3">
+      <h1>{{ rh }}</h1>
+      <!-- <h2>m/s</h2> -->
+    </div>
+    <div class="kotak-kecil4">
+      <h1>{{ pressure }}</h1>
+      <!-- <h2>m/s</h2> -->
+    </div>
+    <div class="kotak-kecil5">
+      <h1>{{ watertemp }}</h1>
+      <!-- <h2>m/s</h2> -->
+    </div>
+
+    <!--Kolom Kotak Kuecil-->
+    <div class="kotak-kuecil">
+      <h2>Windspeed</h2>
+    </div>
+    <div class="kotak-kuecil1">
+      <h2>Winddir</h2>
+    </div>
+    <div class="kotak-kuecil2">
+      <h2>Temperature</h2>
+    </div>
+    <div class="kotak-kuecil3">
+      <h2>Rh</h2>
+    </div>
+    <div class="kotak-kuecil4">
+      <h2>Pressure</h2>
+    </div>
+    <div class="kotak-kuecil5">
+      <h2>Water Temperature</h2>
+    </div>
+
+
+
+  </div>
+
+</body>
+</html>
