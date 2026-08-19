@@ -185,7 +185,7 @@ Warning Period & Wind Speed Range
 Dashboard
 ```
 
-### The system extracts information such as:
+The system extracts information such as:
 
 * Warning start date
 * Warning end date
@@ -193,7 +193,7 @@ Dashboard
 * Warning end time
 * Potential wind speed range
 
-6. Dashboard Integration
+### 6. Dashboard Integration
 
 All processed information is integrated into a Flask web application.
 
